@@ -1,5 +1,4 @@
 import axios from 'axios';
-import aios from 'axios';
 import { setAlert } from './alert';
 import { GET_POSTS, POST_ERROR } from './types';
 
@@ -7,6 +6,7 @@ import { GET_POSTS, POST_ERROR } from './types';
 export const getPosts = () => async (dispatch) => {
   try {
     const res = await axios.get('/api/posts');
+
     dispatch({
       type: GET_POSTS,
       payload: res.data,
